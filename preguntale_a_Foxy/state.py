@@ -25,6 +25,10 @@ class State(rx.State):
             return "Hacer no hacer, tengo pereza"
         elif "tengo este codigo" in question or "corrige" in question:
             return "Preguntale a un adulto responsable o a Google"
+        elif "Hi" in question or "Hello" in question:
+            return "No hablo ingles"
+        elif "can" in question or "you" in question:
+            return "No hablo ingles, no entiendo"
         elif "bye" in question or "chao" in question:
             return "¡Hasta luego! 🖐️"
         else:
