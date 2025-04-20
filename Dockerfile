@@ -1,4 +1,4 @@
-FROM python:3.9-slim  # Python 3.9 es más estable con reflex 0.6
+FROM python:3.9-slim  
 
 # 1. Instala Node.js 16.x (requerido para reflex 0.6)
 RUN apt-get update && \
