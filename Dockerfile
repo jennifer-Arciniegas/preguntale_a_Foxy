@@ -1,25 +1,25 @@
-FROM python:3.9-slim
-
+FROM python:3.11-slim  
 
 RUN apt-get update && \
     apt-get install -y \
     curl \
     gcc \
     python3-dev \
-    unzip \ 
+    unzip \
     && rm -rf /var/lib/apt/lists/*
 
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
-    apt-get install -y nodejs=16.20.2-1nodesource1
+
+RUN curl -fsSL https://bun.sh/install | bash
+ENV PATH="/root/.bun/bin:${PATH}"
 
 
 WORKDIR /app
 COPY . .
 
 
-RUN pip install --no-cache-dir --upgrade "pip<22.0" && \
-    pip install --no-cache-dir --use-deprecated=legacy-resolver -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
 
 EXPOSE 3000
-CMD ["sh", "-c", "reflex init && reflex run --env prod --host 0.0.0.0"]
+CMD ["sh", "-c", "reflex init && reflex run --env prod --backend-host 0.0.0.0"]
