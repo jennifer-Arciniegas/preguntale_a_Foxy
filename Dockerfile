@@ -10,12 +10,11 @@ RUN apt-get update && \
 WORKDIR /app
 COPY . .
 
-# 3. Instala dependencias de Python
+# 3. Instala dependencias
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt && \
-    npm install -g npm@latest && \  # Actualiza npm
-    reflex init
+    npm install -g npm@latest
 
-# 4. Puerto y comando de inicio
+# 4. Inicializa Reflex (esto se ejecutará al iniciar el contenedor)
 EXPOSE 3000
-CMD reflex run --env prod --host 0.0.0.0
+CMD ["sh", "-c", "reflex init && reflex run --env prod --host 0.0.0.0"]
