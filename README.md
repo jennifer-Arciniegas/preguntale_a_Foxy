@@ -29,6 +29,7 @@ en la que puedes interactuar con un simpático asistente virtual. Aunque origina
 ---
 
 ## 🧩 Estructura del proyecto
+```
 preguntale_a_Foxy/
 │
 ├── preguntale_a_Foxy/
@@ -42,15 +43,15 @@ preguntale_a_Foxy/
 ├── Dockerfile                 # Configuración para contenedor Docker
 ├── rxconfig.py                # Configuración Reflex
 └── README.md                  # Documentación del proyecto
+```
 
-
-#🛠️ Requisitos para ejecutarlo
-# Instalar Reflex
-pip install reflex
+# Requisitos para ejecutarlo
+-  Instalar Reflex
+- pip install reflex
 
 # Ejecutar el proyecto
-reflex run
-#💡 Posibilidades de mejora
+- reflex run
+# Posibilidades de mejora
 - Integrar API de IA (como OpenAI) para respuestas inteligentes.
 - Añadir animaciones o stickers de Foxy.
 # ✨ Autor
