@@ -1,5 +1,5 @@
 
-reflex==0.7.7
+
 reflex==0.4.1
 fastapi
 uvicorn
