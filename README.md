@@ -1,4 +1,4 @@
-#Pregúntale a Foxy
+# Pregúntale a Foxy
 
 **Pregúntale a Foxy** es una aplicación web de chat construida con [Reflex](https://reflex.dev/), 
 en la que puedes interactuar con un simpático asistente virtual. Aunque originalmente se planteó como un chatbot con Inteligencia Artificial, actualmente responde con lógica condicional en Python... ¡pero con mucha personalidad!
