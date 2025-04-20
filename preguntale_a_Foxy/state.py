@@ -13,7 +13,7 @@ class State(rx.State):
         
         if "hola" in question:
             return "¡Hola humano! 🦊"
-        elif "cómo estás" in question:
+        elif "cómo estás" in question or "como estas" in question:
             return "Estoy muy bien, gracias por preguntar 🌟"
         elif "no entiendo" in question or "no se" in question:
             return "Deberíamos estudiar más. (Tampoco sé, XD)"
@@ -21,6 +21,10 @@ class State(rx.State):
             return "Soy Foxy, tu asistente virtual peludo 🦊✨"
         elif "ayuda" in question or "me explicas" in question:
             return "Yo creo que Google u otra IA si puede saber, yo apenas estoy aprendiendo"
+        elif "que haces" in question or "hacer" in question:
+            return "Hacer no hacer, tengo pereza"
+        elif "tengo este codigo" in question or "corrige" in question:
+            return "Preguntale a un adulto responsable o a Google"
         elif "bye" in question or "chao" in question:
             return "¡Hasta luego! 🖐️"
         else:

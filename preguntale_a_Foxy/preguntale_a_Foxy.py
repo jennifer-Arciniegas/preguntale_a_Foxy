@@ -5,7 +5,7 @@ from preguntale_a_Foxy.state import State
 def header() -> rx.Component:
     """Cabecera de la aplicación con título y botón de modo oscuro."""
     return rx.flex(
-        rx.heading("Pregúntale a Foxy 🦊", size="8"),  # Cambiado "lg" por tamaño numérico válido
+        rx.heading("Pregúntale a Foxy", size="8"),  # Cambiado "lg" por tamaño numérico válido
         rx.color_mode.button(position="top-right"),
         justify="between",
         align="center",
@@ -39,12 +39,13 @@ def action_bar() -> rx.Component:
     return rx.hstack(
         rx.input(
             value=State.question,
-            placeholder="Write your question",
+            placeholder="Preguntame",
             on_change=State.set_question,
+           # on_key_down=lambda e: State.answer() if e.key =="Enter" else None,
             style=style.input_style,
         ),
         rx.button(
-            "Ask",
+            "Da click",
             on_click=State.answer,
             style=style.button_style,
         ),
